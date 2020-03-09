@@ -1,0 +1,21 @@
+<h1>List for Small Parties</h1>
+<table>
+    <tr>
+        <th>Items</th>
+        <th>Price</th>
+        <th>Amount</th>
+        <th>Subtotal</th>
+    </tr>
+    <% @supplies.each do |supply| %>
+    <tr>
+        <td><%= supply.name %></td>
+        <td>$<%= supply.price %></td>
+        <td><%= supply.amount_s %></td>
+        <td>$<%= supply.price * supply.amount_s %></td>
+    </tr>
+    <% end %>
+</table>
+<h3>The total cost is: $<%= @total %></h3>
+
+
+<%= link_to "Home", '/'%>
